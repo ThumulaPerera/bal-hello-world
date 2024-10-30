@@ -18,7 +18,8 @@ service / on new http:Listener(9090) {
 
     resource function post greet(@http:Payload GreetingReq greetingReq) returns GreetingResp|http:ClientError {
         log:printInfo("Invoking the greeting service");
-        string response = check greetingClient->get(string `/greeting?name=${greetingReq.name}`, {"choreo-api-key": choreoApiKey});
-        return {greeting: response};
+        log:printInfo("choreo-api-key: " + choreoApiKey);
+        // string response = check greetingClient->get(string `/greeting?name=${greetingReq.name}`, {"choreo-api-key": choreoApiKey});
+        // return {greeting: response};
     }
 }
