@@ -5,7 +5,7 @@ schemaVersion: 1.0
 dependencies:
     serviceReferences:
     - name: choreo:///teeorg/api-key/org-api-key/803f0/v1/ORGANIZATION
-      connectionConfig: 01ef9788-b896-19f6-bbb4-310c1cb3fba3
+      connectionConfig: 01ef978a-ff85-1940-b698-6fdfa4b7e710
       env:
         # +required Key name of the connection configuration.
         - from: ServiceURL
