@@ -23,3 +23,17 @@ endpoints:
     networkVisibilities: 
       - Public
       - Organization
+
+# +optional Outgoing connection details for the component.
+dependencies:
+  # +optional Defines the service references from the Internal Marketplace.
+    serviceReferences:
+    - name: choreo:///teeorg/api-key/org-api-key/803f0/v1/ORGANIZATION
+      connectionConfig: 01ef974b-6388-1686-828e-9f7ce5cf86d4
+      env:
+        # +required Key name of the connection configuration.
+        - from: ServiceURL
+          # +required Environment variable injected into the container.
+          to: BAL_CONFIG_VAR_SERVICEURL
+        - from: ChoreoAPIKey
+          to: BAL_CONFIG_VAR_CHOREOAPIKEY
